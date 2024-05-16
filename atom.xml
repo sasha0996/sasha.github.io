@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://sasha0996.github.io/sasha.github.io/</id>
+    <title>sasha</title>
+    <updated>2024-05-16T14:13:12.064Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://sasha0996.github.io/sasha.github.io/"/>
+    <link rel="self" href="https://sasha0996.github.io/sasha.github.io/atom.xml"/>
+    <subtitle>welcome to sasha&apos;s blog</subtitle>
+    <logo>https://sasha0996.github.io/sasha.github.io/images/avatar.png</logo>
+    <icon>https://sasha0996.github.io/sasha.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2024, sasha</rights>
+    <entry>
+        <title type="html"><![CDATA[数据结构与算法]]></title>
+        <id>https://sasha0996.github.io/sasha.github.io/post/shu-ju-jie-gou-yu-suan-fa/</id>
+        <link href="https://sasha0996.github.io/sasha.github.io/post/shu-ju-jie-gou-yu-suan-fa/">
+        </link>
+        <updated>2023-12-13T06:32:45.000Z</updated>
+        <content type="html"><![CDATA[<p>从这里开始，我们参考王道系列课程学习数据结构与算法，并做相应记录。</p>
+<ul>
+<li>
+<p>1基本概念</p>
+</li>
+<li>
+<p>1.1相关概念</p>
+</li>
+</ul>
+<p><em>数据元素</em>（数据的基本单位），由若干个<em>数据项</em>（不可再分的最小单位）组成<br>
+由多个细分属性组成的数据项称为<em>组合项</em>（如：生日2000-11-17）<br>
+属性相同的数据元素组成<em>数据对象</em><br>
+即：<br>
+<em>数据对象</em>是具有相同属性的数据元素的集合，是数据的一个子集<br>
+<em>数据结构</em>是相互之间存在一种或多种特定关系的数据元素集合<br>
+同一个数据对象中的数据元素可以组成不同的数据结构</p>
+<ul>
+<li>1.2数据结构的三要素——逻辑结构、数据的运算、物理结构（存储结构）</li>
+</ul>
+<p>一、逻辑结构：集合结构、线性结构（一对一）、树形结构（一对多）、图状结构（多对多）</p>
+<p>1.集合结构：同处一个集合，无其他关系<br>
+2.线性结构：除两端的数据，中间各数据都有唯一的前驱和后继<br>
+3.树形结构：数据元素间是一对多的关系<br>
+4.图状结构：也叫网状结构，数据元素间是多对多的关系</p>
+<p>二、数据的运算</p>
+<p>结合逻辑结构、实际需求来定义基本运算，如：数据的查找、插入、删除</p>
+<p>三、物理结构</p>
+<p>一、二用于定义数据结构，而物理结构聚焦于如何用计算机实现数据结构<br>
+顺序存储、链式存储、索引存储、散列存储</p>
+<p>1.顺序存储：把逻辑上相邻的元素存储在物理位置也相邻的存储单元中<br>
+2.链式存储：逻辑上相邻的元素在物理位置上可以不相邻，借助指针表示其逻辑关系<br>
+3.索引存储：存储信息时建立索引表，其中每个索引项包含关键字、地址<br>
+4.散列存储：根据元素关键字直接计算出其存储位置，又称哈希（Hash）存储</p>
+<p>物理结构（存储结构）会影响存储空间分配的方便程度及数据运算速度</p>
+<p>数据类型、抽象数据类型：<br>
+数据类型：值的集合及定义在此集合上的一组操作<br>
+1.原子类型-值不可再分<br>
+Bool类型：范围：true、false ； 操作：与、或、非……<br>
+Int类型：范围：-2147483648~2147483647 ； 操作：加、减、乘、除、模运算……<br>
+2.结构类型：值可分解<br>
+struct Coordinate{<br>
+int x;<br>
+int y;<br>
+};</p>
+<p>抽象数据类型（Abstract Data Type, ADT）：是抽象数据组织及与之相关的操作</p>
+<ul>
+<li>1.3算法</li>
+</ul>
+<p>算法：对特定问题求解步骤的描述-指令的有限序列<br>
+特性：有穷性、确定性、可行性、输入、输出</p>
+<p>“好代码”：正确性、可读性、健壮性、高效率与地存储量需求</p>
+<ul>
+<li>
+<p>1.4算法的效率</p>
+</li>
+<li>
+<p>1.4.1时间复杂度</p>
+</li>
+</ul>
+<p>时间开销T与问题规模n的关系，But：T（n）=O（f（n）），即只需保留问题规模n最高阶地项，且系数为1<br>
+<img src="https://sasha0996.github.io/sasha.github.io//post-images/1702452874055.jpg" alt="" loading="lazy"><br>
+<img src="https://sasha0996.github.io/sasha.github.io//post-images/1702452879987.jpg" alt="" loading="lazy"><br>
+<em>口诀：常对幂指阶</em></p>
+<ul>
+<li>1.4.2空间复杂度</li>
+</ul>
+<p>空间开销S与问题规模n的关系，But：S（n）=O（n），计算规则与时间复杂度类似，需注意递归的情况<br>
+<em>（若S（n）=1，则称算法原地工作）</em></p>
+<ul>
+<li>
+<p>2.线性表——（在物理结构上分为:顺序表、链表）</p>
+</li>
+<li>
+<p>2.1</p>
+</li>
+</ul>
+<p>线性表：具有相同数据类型的n个数据元素的有限序列，n-表长（n=0时为空表）</p>
+<p>若以L命名，一边表示为：L=（a1,a2,…,an）——1、2、…、n表示第n个元素在线性表中的<em>位序</em>(从1开始)，a1称表头元素，an称表尾元素，除此之外的元素都有唯一的直接前驱和直接后继</p>
+<p>线性表的基本操作：<em>（创销增删改查）</em><br>
+InitList（&amp;L）：初始化表——构造空表，分配空间<br>
+DestroyList（&amp;L）：销毁操作——销毁线性表，释放空间</p>
+<p>ListInsert（&amp;L,i,e）：插入操作——在L中第i个位置插入指定元素e<br>
+ListDelete（&amp;L,i,&amp;e）：删除操作——删除L中第i个位置的元素，并用e返回删除元素的值</p>
+<p>LocateElem(L,e)：按值查找——在L中查找具有指定关键字值得元素<br>
+GetEleme（L,i）按位查找——获取L中第i个位置得元素得值</p>
+<p>其他常用操作：<br>
+Length（L）：求表长——返回线性表中元素的个数<br>
+PrintList（L）：输出——按前后顺序输出L中的所有元素<br>
+Empty（L）：判空操作——若L为空，则返回true，否则返回false</p>
+<ul>
+<li>顺序表：<br>
+顺序表是用顺序存储得方式实现的线性表<br>
+定义：1.静态分配<br>
+#include &lt;stdio.h&gt;<br>
+#define MaxSiza 10<br>
+typedef struct{<br>
+int data[MaxSize]<br>
+int length<br>
+}SqList;</li>
+</ul>
+<p>void InitList(SqList &amp;L){<br>
+for(int i=0; i&lt;MaxSize; i++){<br>
+L.data[i]=0;<br>
+}<br>
+L.length=0;<br>
+}</p>
+<p>int main(){<br>
+SqList L;<br>
+InitList(L);<br>
+//……<br>
+return 0;<br>
+}</p>
+<p>2.动态分配<br>
+#include &lt;stdib.h&gt;</p>
+<p>#define InitSize 10<br>
+typedef struct{<br>
+int *data;<br>
+int MaxSize;<br>
+int length;<br>
+}SeqList;</p>
+<p>void InitList(SeqList &amp;L){<br>
+//用malloc函数申请一片连续存储空间<br>
+L.data=(int <em>)mallo(InitSize</em>sizeof(int));<br>
+L.length=0;<br>
+L.MaxSize=InitSize;<br>
+}</p>
+<p>//增加动态数组长度<br>
+void IncreaseSize(SeqList &amp;L, int len){<br>
+int *p=L.data;<br>
+L.data=(int *)malloc((L.MaxSize+len)*sizeof(int));<br>
+for(int i=0; i&lt;L.length; i++){<br>
+L.data[i]=p[i];<br>
+}<br>
+L.Maxsize=L.MaxSize+len;<br>
+free(p)<br>
+}</p>
+<p>int main(){<br>
+SeqList L;<br>
+InitList(L);<br>
+//...<br>
+IncreaseSize(L,5);<br>
+return 0;<br>
+}</p>
+<p>顺序表的特点：<br>
+1.随机访问：可以在O（1）时间内找到第i个元素<br>
+2.存储密度高：每个节点只存储数据元素<br>
+3.拓展容量不方便（即便是动态存储，拓展容量的时间复杂度也较高）<br>
+4.插入、删除操作不方便</p>
+<ul>
+<li>顺序表的插入、删除操作</li>
+</ul>
+<p>ListInsert(&amp;L,i,e)：插入操作——在L中的第i个位置插入指定元素e<br>
+注：此处的i为位序，从1开始</p>
+<p>eg：以静态分配为例<br>
+#define MaxSize 10<br>
+typedef struct{<br>
+ElemType data[MaxSize];<br>
+int length;<br>
+}SqList;</p>
+<p>void ListInseret(SqList &amp;L,int i,int e){<br>
+for(int j=L.length;j&gt;=i;j--){<br>
+L.data[j]=L.data[j-1];<br>
+}<br>
+L.data[i-1]=e;<br>
+L.length++;<br>
+}</p>
+<p>int main(){<br>
+SqList L;<br>
+InitList(L);<br>
+//……<br>
+ListInsert(L,3,3);<br>
+return 0;<br>
+}</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[键盘输入平方（m²）或立方（m³）等特殊字符]]></title>
+        <id>https://sasha0996.github.io/sasha.github.io/post/jian-pan-shu-ru-ping-fang-m2huo-li-fang-m3deng-te-shu-zi-fu/</id>
+        <link href="https://sasha0996.github.io/sasha.github.io/post/jian-pan-shu-ru-ping-fang-m2huo-li-fang-m3deng-te-shu-zi-fu/">
+        </link>
+        <updated>2023-12-12T15:05:26.000Z</updated>
+        <content type="html"><![CDATA[<p>按键组合	字符<br>
+Alt+41689	①<br>
+Alt+41690	②<br>
+Alt+41691	③<br>
+Alt+41692	④<br>
+Alt+41693	⑤<br>
+Alt+41694	⑥<br>
+Alt+41695	⑦<br>
+Alt+41696	⑧<br>
+Alt+41697	⑨<br>
+Alt+41698	⑩<br>
+Alt+41701	㈠<br>
+Alt+41702	㈡<br>
+Alt+41703	㈢<br>
+Alt+41704	㈣<br>
+Alt+41705	㈤<br>
+Alt+41706	㈥<br>
+Alt+41707	㈦<br>
+Alt+41708	㈧<br>
+Alt+41709	㈨<br>
+Alt+41710	㈩<br>
+Alt+41713	Ⅰ<br>
+Alt+41714	Ⅱ<br>
+Alt+41715	Ⅲ<br>
+Alt+41716	Ⅳ<br>
+Alt+41717	Ⅴ<br>
+Alt+41718	Ⅵ<br>
+Alt+41719	Ⅶ<br>
+Alt+41720	Ⅷ<br>
+Alt+41721	Ⅸ<br>
+Alt+41722	Ⅹ<br>
+Alt+41723	Ⅺ<br>
+Alt+41724	Ⅻ<br>
+Alt+42689	α<br>
+Alt+42690	β<br>
+Alt+42691	γ<br>
+Alt+42692	δ<br>
+Alt+42693	ε<br>
+Alt+42964	ζ<br>
+Alt+42695	η<br>
+Alt+42696	θ<br>
+Alt+42697	ι<br>
+Alt+42698	κ<br>
+Alt+42699	λ<br>
+Alt+42700	μ<br>
+Alt+42701	ν<br>
+Alt+42702	ξ<br>
+Alt+42703	ο<br>
+Alt+42704	π<br>
+Alt+42705	ρ<br>
+Alt+42706	σ<br>
+Alt+42707	τ<br>
+Alt+42708	υ<br>
+Alt+42709	φ<br>
+Alt+42710	χ<br>
+Alt+42711	ψ<br>
+Alt+42712	ω<br>
+Alt+178	²<br>
+Alt+179	³<br>
+Alt+215	×<br>
+Alt+247	÷<br>
+Alt+176	°<br>
+Alt+177	±<br>
+Alt+189	½<br>
+Alt+188	¼<br>
+Alt+190	¾<br>
+Alt+137	‰<br>
+Alt+41430	≈<br>
+Alt+41433	≠<br>
+Alt+41434	≮<br>
+Alt+41435	≯<br>
+Alt+41436	≤<br>
+Alt+41437	≥<br>
+Alt+41439	∵<br>
+Alt+41440	∴<br>
+Alt+0169	©<br>
+Alt+0174	®<br>
+Alt+0153	™<br>
+Alt+0149	•<br>
+Alt+0150	–<br>
+Alt+0151	—<br>
+Alt+41446	℃<br>
+Alt+41460	◆<br>
+Alt+41459	◇<br>
+Alt+41458	◎<br>
+Alt+41457	●<br>
+Alt+41456	○<br>
+Alt+41455	★<br>
+Alt+41454	☆<br>
+Alt+41462	■<br>
+Alt+41461	□<br>
+Alt+41464	▲<br>
+Alt+41463	△<br>
+Alt+0123	{<br>
+Alt+0125	}<br>
+Alt+0091	[<br>
+Alt+0093	]<br>
+Alt+41406	【<br>
+Alt+41407	】<br>
+Alt+41896	（<br>
+Alt+41897	）<br>
+Alt+41916	＜<br>
+Alt+41918	＞<br>
+Alt+41412	∧<br>
+Alt+41413	∨<br>
+Alt+41387	～<br>
+Alt+41420	√<br>
+Alt+41409	×<br>
+Alt+41466	→<br>
+Alt+41467	←<br>
+Alt+41468	↑<br>
+Alt+41469	↓<br>
+Alt+43082	↗<br>
+Alt+43081	↖<br>
+Alt+43083	↘<br>
+Alt+43084	↙<br>
+————————————————<br>
+版权声明：本文为CSDN博主「WaiSaa」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br>
+原文链接：https://blog.csdn.net/qq_42761569/article/details/110119723</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[CAD快捷键]]></title>
+        <id>https://sasha0996.github.io/sasha.github.io/post/cad-kuai-jie-jian/</id>
+        <link href="https://sasha0996.github.io/sasha.github.io/post/cad-kuai-jie-jian/">
+        </link>
+        <updated>2023-12-12T14:59:53.000Z</updated>
+        <content type="html"><![CDATA[<p>这部分为在基准方中实习时学到的一些快捷键，只适用于天正!</p>
+<ul>
+<li>
+<p>已命名快捷键：<br>
+XL射线<br>
+SC放大缩小<br>
+CH特性<br>
+TSLOBJ全选同类<br>
+RO旋转<br>
+Tav均分<br>
+Os设置基点选项<br>
+SQA启动/关闭项目管理器<br>
+B做块<br>
+tkgs图块改色<br>
+Refe在位refc保存退出<br>
+Ma属性复制<br>
+Czth查找替换<br>
+XC新建边界<br>
+Hb合并区间<br>
+Mi镜像<br>
+XC剪切<br>
+Yc引出标注<br>
+Trev云线引出</p>
+</li>
+<li>
+<p>未命名快捷键：<br>
+Pl<br>
+Li<br>
+CT<br>
+Pldc</p>
+</li>
+</ul>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Swift]]></title>
+        <id>https://sasha0996.github.io/sasha.github.io/post/swift/</id>
+        <link href="https://sasha0996.github.io/sasha.github.io/post/swift/">
+        </link>
+        <updated>2023-12-12T12:52:02.000Z</updated>
+        <content type="html"><![CDATA[<p>该篇我们以一个编程小白的视角学习Swift，参考《Swift语言实战入门（第二版）》</p>
+<ul>
+<li>
+<h1 id="11语法入门">1.1语法入门</h1>
+</li>
+<li>1.1.1变量与常量</li>
+</ul>
+<p>声明变量使用关键字<code>var</code><br>
+声明常量使用关键字<code>let</code>  <strong>可以这么说：常量是声明后只能初始化一次的变量</strong><br>
+<code>var str = &quot;hello world&quot;</code><br>
+<code>let instrationCount = 2</code><br>
+<em>（可以不用事先声明其数据类型，swift会自行进行判断）</em><br>
+But：若在声明时没有初始化变量/常量，则必须声明其类型，用冒号充当分隔符<br>
+<code>let instrationCount:Int</code><br>
+<code>var tmpCount:Int = 2</code></p>
+<p>Swift允许使用；分隔每一行代码，也可以不用，但若一行代码有多个表达式，则每个表达式都应用；进行分隔！如：<code>var numMax:Int;var numMin:Int</code></p>
+<p>某种类型的值称为<em>字面量</em>，如2.8就是浮点型的字面量；特殊进制的数值前需加前缀，如：二进制数前缀-<code>0b</code>、八进制数前缀-<code>0o</code>、十六进制数前缀-<code>0x</code>；数值的字面量有指数形式：2.048e3//等于2.048×10³（此处ALT+179可以打出³）</p>
+<p>一些命名规则：不能使用保留字、常量名命名；对大小写敏感采用驼峰命名法</p>
+<ul>
+<li>1.1.2整形</li>
+</ul>
+<p>有符号整型：<code>Int</code><br>
+无符号整型：<code>UInt</code><br>
+Swift拥有继承自 C语言的有符号整型Int、Int8、Int16、Int32、Int64，以及无符号整型：UInt、UInt8、UInt16、UInt32、UInt64<br>
+句点访问法访问对应类型的取值范围：<br>
+<code>UInt8.min//0</code><br>
+<code>UInt8.max//255</code><br>
+<em>隐式声明：</em><br>
+<code>var sampleInteger:Int</code><br>
+<code>var tmpInteger = 12</code><br>
+<em>显式声明：</em><br>
+<code>var tmpInteger = Int.init(12)</code><em>（这里init（）属于初始化构造器）</em><br>
+除了初始化构造器、min和max属性，还有对应类型的方法和属性如下：<br>
+<code>temInteger.getMirror()</code><br>
+<code>temInteger.encode()</code><br>
+<code>temInteger.bigEndian</code></p>
+<ul>
+<li>1.1.3浮点型</li>
+</ul>
+<p>有符号浮点数：<code>Double</code>（64位）、<code>Float</code>（32位）<br>
+<em>（在使用类型推断声明时，默认推断为<code>Double</code>类型）</em><br>
+或者使用<code>Float32</code>、<code>Float64</code>来表达32位、64位的浮点数</p>
+<p>相关属性：<br>
+<code>DoubleValue.isFinite</code><br>
+<code>DoubleValue.isNormal</code><br>
+<code>DoubleValue.isZero</code><br>
+<code>DoubleValue.isSignaling</code><br>
+<code>DoubleValue.description</code></p>
+<ul>
+<li>1.1.4布尔型</li>
+</ul>
+<p>布尔型只有两种值：<code>true</code>、<code>false</code><br>
+在需要逻辑判断的地方使用，有两种方式，一种是直接使用<code>true</code>、<code>false</code>，另一种是使用<code>==</code>操作符比较两个对象是否相等</p>
+<p>声明：<br>
+<code>var sampleValue:Bool</code><br>
+<code>var keyValue = false</code></p>
+<p>可以通过访问description属性输出字符值：<br>
+<code>var keyValue.description</code><br>
+可以在if判断语句中使用布尔变量作为条件：<br>
+<code> if !keyValue{}</code><br>
+可以在while中使用表达式（特殊的布尔值）作为条件：<br>
+<code>while surplusDate&gt;=0</code></p>
+<ul>
+<li>1.1.5字符串的字符</li>
+</ul>
+<p>字符串类型：<code>String</code><br>
+字符类型：<code>Character</code></p>
+<ul>
+<li>1.1.5.1字符串<br>
+数字、字母、下划线和其他符号的集合，如：“”、“hello，world”、“game”<br>
+字符串搜索、拷贝、插入、删除等操作有相应的API函数可以使用</li>
+</ul>
+<p>//字符串连接操作可以通过<code>+</code>将两个字符串相连<br>
+<code>sampleStr = &quot;keyNote&quot;+&quot; is not null&quot;</code></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[摄影分享]]></title>
+        <id>https://sasha0996.github.io/sasha.github.io/post/she-ying-fen-xiang/</id>
+        <link href="https://sasha0996.github.io/sasha.github.io/post/she-ying-fen-xiang/">
+        </link>
+        <updated>2023-12-11T14:11:36.000Z</updated>
+        <content type="html"><![CDATA[<p>我还蛮喜欢拍拍照片的，之前买了canon m50Ⅱ，玩了一段时间就出了，在这里浅浅分享一下吧！</p>
+<p>之前都是用手机拍摄的，先看看第一次拿到相机那晚的成果吧~<br>
+<img src="https://sasha0996.github.io/sasha.github.io//post-images/1702367142366.JPG" alt="" loading="lazy"><br>
+这张照片拍摄于2022年4月17日，主体为四川大学江安校区图书馆，由加拿大著名设计师阿穆莱德设计。<br>
+相关链接：<br>
+（四川大学图书馆发展历史）https://lib.scu.edu.cn/node/97909<br>
+（庄重和谐·对称构图）https://zhuanlan.zhihu.com/p/39095883<br>
+江安图书馆坐落于明远湖畔，形似点燃的火炬，拍摄机位位于长桥，我记得使用的50定焦，所以构图上有一定的妥协，显得并不是非常和谐，整个建筑设计在晚上显得很通透，设计也考虑到了周围和场地设计，使得外围成为了读书、观景、晒太阳的好去处。</p>
+<p><img src="https://sasha0996.github.io/sasha.github.io//post-images/1702369150164.JPG" alt="" loading="lazy"><br>
+这张照片是在宿舍旁子衿路的共享单车停放点拍摄的，试图模仿拍摄出强烈的纵深感，和我当时的情绪状态非常契合，感觉自己时刻在凝视着深渊……<br>
+相关链接：<br>
+（营造画面空间纵深感）：https://fotoplace.cc/m3/activity/subject/197</p>
+<p>在看了该文章后我立刻想到了一张照片：<br>
+<img src="https://sasha0996.github.io/sasha.github.io//post-images/1702371089725.jpg" alt="" loading="lazy"><br>
+这张照片拍摄于2022年11月22日，是在从库尔勒开往成都的专列上，正是新冠疫情后期，当地政府安排了这趟列车送滞留在库尔勒的工人和学生前往成都；两个乘客的目光集中在中间的列车员身上，列车员身着防护服劳累、忙碌的穿梭在乘客之间。</p>
+<p>还有一张在教学楼走廊拍摄的照片我也很喜欢：<br>
+<img src="https://sasha0996.github.io/sasha.github.io//post-images/1702371745032.JPG" alt="" loading="lazy"><br>
+这张照片无论在构图还是光影上明显都差了点意思，但是正正好符合我当时的心境：沉重的带着一点希望、内心杂乱不堪。我不知道走廊两边的墙壁为什么会用不一样的颜色，但在这张照片中显得十分和谐。</p>
+<p>还有一张照片其实完全说不上哪里好，但是就是觉得眼前的景象如莫奈笔下的睡莲一般十分有意境，不拍下来会很可惜。<br>
+<img src="https://sasha0996.github.io/sasha.github.io//post-images/1702372452802.JPG" alt="" loading="lazy"><br>
+相关链接：<br>
+（莫奈的“睡莲”，你真的看懂了吗？）https://zhuanlan.zhihu.com/p/166169655</p>
+<p>在继续我非常期待的一个话题之前，想先分享一个不知道算不算小众的机位——共和村鸳鸯楼<br>
+感觉有点类似重庆白象居，当时是一个人去的，很怕打扰到人家，草草拍了几张就离开了，其实没什么，主要是非常富有生活气息，说白了就是很接地气的一个地方，容易让人怀旧。<br>
+<img src="https://sasha0996.github.io/sasha.github.io//post-images/1702374128429.JPG" alt="" loading="lazy"><br>
+<img src="https://sasha0996.github.io/sasha.github.io//post-images/1702374633618.jpg" alt="" loading="lazy"><br>
+总体上给人一种破碎感，但我快要离开时发现家家户户都开始做晚饭了，小朋友也出来玩儿了（虽然是坐在台阶上打王者荣耀），整个天井里充满了烟火气。</p>
+<p>接下来说一说我很喜欢的摄影题材——人文摄影<br>
+我也看到最近这个话题讨论非常激烈，在《论摄影》一书中也讨论了摄影的“侵略性”（之后我会进行阅读），我也进行了一些反思，因为我在街头进行类似摄影行为时并未征询当事人的意见，可能是性格的原因或别的什么，但总归是不好的。网上也有很多关于人文摄影的帖子，有讨论技巧的，有讨论概念的，也有讨论伦理道德的，大家可以自行搜索查看。</p>
+<p><img src="https://sasha0996.github.io/sasha.github.io//post-images/1702394166771.jpg" alt="" loading="lazy"><br>
+这张照片是我跟朋友吃完饭后在车上拍下的一名年轻的执勤交警，其实没什么内容，只是我觉得当时的环境和构图都可以让我拍下这么一张照片。</p>
+<p><img src="https://sasha0996.github.io/sasha.github.io//post-images/1702394295838.JPG" alt="" loading="lazy"><br>
+这张照片是我做完手术准备回家时在机场拍的一个正在看书的女生，当时主要是觉得这个构图应该会很不错，拍完后发现人物素雅得刚刚好，体态也非常衬环境。</p>
+<p><img src="https://sasha0996.github.io/sasha.github.io//post-images/1702394684969.JPG" alt="" loading="lazy"><br>
+这张照片是在重庆解放碑拍摄的一对奶奶和孙女（当然这里有我的一些情感经历我会放在情感部分得文章里，感兴趣得朋友可以去看看），这张照片得光圈和构图其实都不太好，但我已经错过了拍摄得时机，还是决定留下这一刻的心情。</p>
+<p><img src="https://sasha0996.github.io/sasha.github.io//post-images/1702438625497.JPG" alt="" loading="lazy"><br>
+这张算得上是我最喜欢的一张照片了，我也不知道自己是陷入了侵略性摄影的陷阱还是单纯的享受这个意境，我估计大概率是第一种了。</p>
+<p>其实在学校里很少感受到秋天的气息，这张照片算是有一点秋的影子在吧：<br>
+<img src="https://sasha0996.github.io/sasha.github.io//post-images/1702438888441.JPG" alt="" loading="lazy"></p>
+<p>还有就是我为数不多的色彩比较鲜明的照片了<br>
+<img src="https://sasha0996.github.io/sasha.github.io//post-images/1702438942972.JPG" alt="" loading="lazy"><br>
+<img src="https://sasha0996.github.io/sasha.github.io//post-images/1702438957369.JPG" alt="" loading="lazy"></p>
+<p>突然又想到了重庆的照片，在这里一并放出来，之后会在情感专题具体讲述里面的故事。<br>
+<img src="https://sasha0996.github.io/sasha.github.io//post-images/1702439054401.jpg" alt="" loading="lazy"><br>
+这是落地重庆机场后拍下的，也是这段感情的开端，当时应该用的小米11 Ultra进行拍摄的，就是为了打个卡，这一段的照片基本都比较随意，就不放在这里了。</p>
+<p><img src="https://sasha0996.github.io/sasha.github.io//post-images/1702439231925.JPG" alt="" loading="lazy"><br>
+这是这段感情的第二部分了，是在成都东站拍摄的，准备坐动车前往重庆，是一张非常有侵略性的照片，也是我第一次从正面拍摄，不过iso控制的很不好，画面暗部几乎没有细节。</p>
+<p><img src="https://sasha0996.github.io/sasha.github.io//post-images/1702439376380.JPG" alt="" loading="lazy"><br>
+这张就比较差了，但是它恰好和镜头有了一个眼神的交会，还蛮有趣的。</p>
+<p><img src="https://sasha0996.github.io/sasha.github.io//post-images/1702439425251.JPG" alt="" loading="lazy"><br>
+这里我没有选择拍摄具体的人物，我想利用路牌上的小人表达一个只属于两个人的热闹，不过没有把握好主体，贪婪的想把周围的元素都囊括进来。</p>
+<p><img src="https://sasha0996.github.io/sasha.github.io//post-images/1702439526373.JPG" alt="" loading="lazy"><br>
+这对父子是我转身的瞬间抓拍到的，大概是出于羡慕或是什么类似的情愫吧。</p>
+<p>相机还有很多照片，之后想到了再分享出来，之后的内容会分享一些用手机拍摄的照片，有很早之前用荣耀9拍摄的，也算是我的摄影启蒙设备，也有小米11 Ultra、iPhone14 pro。</p>
+<p>未完待续……</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[关于我……]]></title>
+        <id>https://sasha0996.github.io/sasha.github.io/post/guan-yu-wo/</id>
+        <link href="https://sasha0996.github.io/sasha.github.io/post/guan-yu-wo/">
+        </link>
+        <updated>2023-12-11T09:19:57.000Z</updated>
+        <content type="html"><![CDATA[<p>你可以叫我sasha<br>
+from：新疆<br>
+四川大学（本科）    土木工程<br>
+23岁                Gay（已出柜）<br>
+也算是从小城镇里读书熬出来的男孩子吧，由于种种原因，目前才算是开启了属于自己的人生的一个状态吧，能在一定程度上自在的做一些自己喜欢的事情；谈过一段不太好的恋爱，有过几段很真挚的友情，我觉得也算是在人生中比较圆满的经历吧……<br>
+就大概说些基本情况吧，我大概就是这么一个随性又焦虑的男孩儿，就由此开始我的新生吧！</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[为什么开始写博客？]]></title>
+        <id>https://sasha0996.github.io/sasha.github.io/post/wei-shi-me-kai-shi-xie-bo-ke/</id>
+        <link href="https://sasha0996.github.io/sasha.github.io/post/wei-shi-me-kai-shi-xie-bo-ke/">
+        </link>
+        <updated>2023-12-11T09:01:25.000Z</updated>
+        <content type="html"><![CDATA[<p>很早开始就想用文字记录身边的一切了，感觉像是以此迫使自己不断向前推进，我向来不喜欢文字的，但不得不承认文字蕴含的力量是巨大的，我想将我的过去、现在以及未来通过这样一种方式进行修整……<br>
+<img src="https://sasha0996.github.io/sasha.github.io//post-images/1702285776764.jpg" alt="" loading="lazy"><br>
+我想…人生就是用来体验的，有很多东西体验过后无论结果如何，不必焦虑、不必狂喜，用文字记录下来，反复体会其中的内容！</p>
+]]></content>
+    </entry>
+</feed>

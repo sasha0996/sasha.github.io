@@ -1,0 +1,292 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Swift | sasha</title>
+<link rel="shortcut icon" href="https://sasha0996.github.io/sasha.github.io//favicon.ico?v=1715868753576">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://sasha0996.github.io/sasha.github.io//styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="Swift | sasha - Atom Feed" href="https://sasha0996.github.io/sasha.github.io//atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="该篇我们以一个编程小白的视角学习Swift，参考《Swift语言实战入门（第二版）》
+
+
+1.1语法入门
+
+1.1.1变量与常量
+
+声明变量使用关键字var
+声明常量使用关键字let  可以这么说：常量是声明后只能初始化一次的变量
+var ..." />
+    <meta name="keywords" content="笔记" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://sasha0996.github.io/sasha.github.io/">
+  <img class="avatar" src="https://sasha0996.github.io/sasha.github.io//images/avatar.png?v=1715868753576" alt="">
+  </a>
+  <h1 class="site-title">
+    sasha
+  </h1>
+  <p class="site-description">
+    welcome to sasha's blog
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="https://sasha0996.github.io/sasha.github.io/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="https://sasha0996.github.io/sasha.github.io/tag/entertainment/" class="menu">
+          娱乐
+        </a>
+      
+    
+      
+        <a href="https://sasha0996.github.io/sasha.github.io/tag/emotion/" class="menu">
+          情绪/感情
+        </a>
+      
+    
+      
+        <a href="https://sasha0996.github.io/sasha.github.io/tag/notes/" class="menu">
+          笔记
+        </a>
+      
+    
+      
+        <a href="https://sasha0996.github.io/sasha.github.io/tag/tips/" class="menu">
+          一些小Tips
+        </a>
+      
+    
+      
+        <a href="https://sasha0996.github.io/sasha.github.io/tag/aboutMe/" class="menu">
+          关于我
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              Swift
+            </h2>
+            <div class="post-info">
+              <span>
+                2023-12-12
+              </span>
+              <span>
+                3 min read
+              </span>
+              
+                <a href="https://sasha0996.github.io/sasha.github.io/tag/notes/" class="post-tag">
+                  # 笔记
+                </a>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content" v-pre>
+                <p>该篇我们以一个编程小白的视角学习Swift，参考《Swift语言实战入门（第二版）》</p>
+<ul>
+<li>
+<h1 id="11语法入门">1.1语法入门</h1>
+</li>
+<li>1.1.1变量与常量</li>
+</ul>
+<p>声明变量使用关键字<code>var</code><br>
+声明常量使用关键字<code>let</code>  <strong>可以这么说：常量是声明后只能初始化一次的变量</strong><br>
+<code>var str = &quot;hello world&quot;</code><br>
+<code>let instrationCount = 2</code><br>
+<em>（可以不用事先声明其数据类型，swift会自行进行判断）</em><br>
+But：若在声明时没有初始化变量/常量，则必须声明其类型，用冒号充当分隔符<br>
+<code>let instrationCount:Int</code><br>
+<code>var tmpCount:Int = 2</code></p>
+<p>Swift允许使用；分隔每一行代码，也可以不用，但若一行代码有多个表达式，则每个表达式都应用；进行分隔！如：<code>var numMax:Int;var numMin:Int</code></p>
+<p>某种类型的值称为<em>字面量</em>，如2.8就是浮点型的字面量；特殊进制的数值前需加前缀，如：二进制数前缀-<code>0b</code>、八进制数前缀-<code>0o</code>、十六进制数前缀-<code>0x</code>；数值的字面量有指数形式：2.048e3//等于2.048×10³（此处ALT+179可以打出³）</p>
+<p>一些命名规则：不能使用保留字、常量名命名；对大小写敏感采用驼峰命名法</p>
+<ul>
+<li>1.1.2整形</li>
+</ul>
+<p>有符号整型：<code>Int</code><br>
+无符号整型：<code>UInt</code><br>
+Swift拥有继承自 C语言的有符号整型Int、Int8、Int16、Int32、Int64，以及无符号整型：UInt、UInt8、UInt16、UInt32、UInt64<br>
+句点访问法访问对应类型的取值范围：<br>
+<code>UInt8.min//0</code><br>
+<code>UInt8.max//255</code><br>
+<em>隐式声明：</em><br>
+<code>var sampleInteger:Int</code><br>
+<code>var tmpInteger = 12</code><br>
+<em>显式声明：</em><br>
+<code>var tmpInteger = Int.init(12)</code><em>（这里init（）属于初始化构造器）</em><br>
+除了初始化构造器、min和max属性，还有对应类型的方法和属性如下：<br>
+<code>temInteger.getMirror()</code><br>
+<code>temInteger.encode()</code><br>
+<code>temInteger.bigEndian</code></p>
+<ul>
+<li>1.1.3浮点型</li>
+</ul>
+<p>有符号浮点数：<code>Double</code>（64位）、<code>Float</code>（32位）<br>
+<em>（在使用类型推断声明时，默认推断为<code>Double</code>类型）</em><br>
+或者使用<code>Float32</code>、<code>Float64</code>来表达32位、64位的浮点数</p>
+<p>相关属性：<br>
+<code>DoubleValue.isFinite</code><br>
+<code>DoubleValue.isNormal</code><br>
+<code>DoubleValue.isZero</code><br>
+<code>DoubleValue.isSignaling</code><br>
+<code>DoubleValue.description</code></p>
+<ul>
+<li>1.1.4布尔型</li>
+</ul>
+<p>布尔型只有两种值：<code>true</code>、<code>false</code><br>
+在需要逻辑判断的地方使用，有两种方式，一种是直接使用<code>true</code>、<code>false</code>，另一种是使用<code>==</code>操作符比较两个对象是否相等</p>
+<p>声明：<br>
+<code>var sampleValue:Bool</code><br>
+<code>var keyValue = false</code></p>
+<p>可以通过访问description属性输出字符值：<br>
+<code>var keyValue.description</code><br>
+可以在if判断语句中使用布尔变量作为条件：<br>
+<code> if !keyValue{}</code><br>
+可以在while中使用表达式（特殊的布尔值）作为条件：<br>
+<code>while surplusDate&gt;=0</code></p>
+<ul>
+<li>1.1.5字符串的字符</li>
+</ul>
+<p>字符串类型：<code>String</code><br>
+字符类型：<code>Character</code></p>
+<ul>
+<li>1.1.5.1字符串<br>
+数字、字母、下划线和其他符号的集合，如：“”、“hello，world”、“game”<br>
+字符串搜索、拷贝、插入、删除等操作有相应的API函数可以使用</li>
+</ul>
+<p>//字符串连接操作可以通过<code>+</code>将两个字符串相连<br>
+<code>sampleStr = &quot;keyNote&quot;+&quot; is not null&quot;</code></p>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li><a href="#11%E8%AF%AD%E6%B3%95%E5%85%A5%E9%97%A8">1.1语法入门</a></li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://sasha0996.github.io/sasha.github.io/post/she-ying-fen-xiang/">
+              <h3 class="post-title">
+                摄影分享
+              </h3>
+            </a>
+          </div>
+        
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: '2f0af724eb6867518cdf',
+    clientSecret: '7e9c9b5fadb34a89d433c8833ac0e7dbf0374aae',
+    repo: 'sasha.github.io',
+    owner: 'sasha0996',
+    admin: ['sasha0996'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://sasha0996.github.io/sasha.github.io//atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>

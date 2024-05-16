@@ -1,0 +1,389 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>数据结构与算法 | sasha</title>
+<link rel="shortcut icon" href="https://sasha0996.github.io/sasha.github.io//favicon.ico?v=1715868753576">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://sasha0996.github.io/sasha.github.io//styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="数据结构与算法 | sasha - Atom Feed" href="https://sasha0996.github.io/sasha.github.io//atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="从这里开始，我们参考王道系列课程学习数据结构与算法，并做相应记录。
+
+
+1基本概念
+
+
+1.1相关概念
+
+
+数据元素（数据的基本单位），由若干个数据项（不可再分的最小单位）组成
+由多个细分属性组成的数据项称为组合项（如：生日2000-11-..." />
+    <meta name="keywords" content="笔记" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://sasha0996.github.io/sasha.github.io/">
+  <img class="avatar" src="https://sasha0996.github.io/sasha.github.io//images/avatar.png?v=1715868753576" alt="">
+  </a>
+  <h1 class="site-title">
+    sasha
+  </h1>
+  <p class="site-description">
+    welcome to sasha's blog
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="https://sasha0996.github.io/sasha.github.io/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="https://sasha0996.github.io/sasha.github.io/tag/entertainment/" class="menu">
+          娱乐
+        </a>
+      
+    
+      
+        <a href="https://sasha0996.github.io/sasha.github.io/tag/emotion/" class="menu">
+          情绪/感情
+        </a>
+      
+    
+      
+        <a href="https://sasha0996.github.io/sasha.github.io/tag/notes/" class="menu">
+          笔记
+        </a>
+      
+    
+      
+        <a href="https://sasha0996.github.io/sasha.github.io/tag/tips/" class="menu">
+          一些小Tips
+        </a>
+      
+    
+      
+        <a href="https://sasha0996.github.io/sasha.github.io/tag/aboutMe/" class="menu">
+          关于我
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              数据结构与算法
+            </h2>
+            <div class="post-info">
+              <span>
+                2023-12-13
+              </span>
+              <span>
+                7 min read
+              </span>
+              
+                <a href="https://sasha0996.github.io/sasha.github.io/tag/notes/" class="post-tag">
+                  # 笔记
+                </a>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content" v-pre>
+                <p>从这里开始，我们参考王道系列课程学习数据结构与算法，并做相应记录。</p>
+<ul>
+<li>
+<p>1基本概念</p>
+</li>
+<li>
+<p>1.1相关概念</p>
+</li>
+</ul>
+<p><em>数据元素</em>（数据的基本单位），由若干个<em>数据项</em>（不可再分的最小单位）组成<br>
+由多个细分属性组成的数据项称为<em>组合项</em>（如：生日2000-11-17）<br>
+属性相同的数据元素组成<em>数据对象</em><br>
+即：<br>
+<em>数据对象</em>是具有相同属性的数据元素的集合，是数据的一个子集<br>
+<em>数据结构</em>是相互之间存在一种或多种特定关系的数据元素集合<br>
+同一个数据对象中的数据元素可以组成不同的数据结构</p>
+<ul>
+<li>1.2数据结构的三要素——逻辑结构、数据的运算、物理结构（存储结构）</li>
+</ul>
+<p>一、逻辑结构：集合结构、线性结构（一对一）、树形结构（一对多）、图状结构（多对多）</p>
+<p>1.集合结构：同处一个集合，无其他关系<br>
+2.线性结构：除两端的数据，中间各数据都有唯一的前驱和后继<br>
+3.树形结构：数据元素间是一对多的关系<br>
+4.图状结构：也叫网状结构，数据元素间是多对多的关系</p>
+<p>二、数据的运算</p>
+<p>结合逻辑结构、实际需求来定义基本运算，如：数据的查找、插入、删除</p>
+<p>三、物理结构</p>
+<p>一、二用于定义数据结构，而物理结构聚焦于如何用计算机实现数据结构<br>
+顺序存储、链式存储、索引存储、散列存储</p>
+<p>1.顺序存储：把逻辑上相邻的元素存储在物理位置也相邻的存储单元中<br>
+2.链式存储：逻辑上相邻的元素在物理位置上可以不相邻，借助指针表示其逻辑关系<br>
+3.索引存储：存储信息时建立索引表，其中每个索引项包含关键字、地址<br>
+4.散列存储：根据元素关键字直接计算出其存储位置，又称哈希（Hash）存储</p>
+<p>物理结构（存储结构）会影响存储空间分配的方便程度及数据运算速度</p>
+<p>数据类型、抽象数据类型：<br>
+数据类型：值的集合及定义在此集合上的一组操作<br>
+1.原子类型-值不可再分<br>
+Bool类型：范围：true、false ； 操作：与、或、非……<br>
+Int类型：范围：-2147483648~2147483647 ； 操作：加、减、乘、除、模运算……<br>
+2.结构类型：值可分解<br>
+struct Coordinate{<br>
+int x;<br>
+int y;<br>
+};</p>
+<p>抽象数据类型（Abstract Data Type, ADT）：是抽象数据组织及与之相关的操作</p>
+<ul>
+<li>1.3算法</li>
+</ul>
+<p>算法：对特定问题求解步骤的描述-指令的有限序列<br>
+特性：有穷性、确定性、可行性、输入、输出</p>
+<p>“好代码”：正确性、可读性、健壮性、高效率与地存储量需求</p>
+<ul>
+<li>
+<p>1.4算法的效率</p>
+</li>
+<li>
+<p>1.4.1时间复杂度</p>
+</li>
+</ul>
+<p>时间开销T与问题规模n的关系，But：T（n）=O（f（n）），即只需保留问题规模n最高阶地项，且系数为1<br>
+<img src="https://sasha0996.github.io/sasha.github.io//post-images/1702452874055.jpg" alt="" loading="lazy"><br>
+<img src="https://sasha0996.github.io/sasha.github.io//post-images/1702452879987.jpg" alt="" loading="lazy"><br>
+<em>口诀：常对幂指阶</em></p>
+<ul>
+<li>1.4.2空间复杂度</li>
+</ul>
+<p>空间开销S与问题规模n的关系，But：S（n）=O（n），计算规则与时间复杂度类似，需注意递归的情况<br>
+<em>（若S（n）=1，则称算法原地工作）</em></p>
+<ul>
+<li>
+<p>2.线性表——（在物理结构上分为:顺序表、链表）</p>
+</li>
+<li>
+<p>2.1</p>
+</li>
+</ul>
+<p>线性表：具有相同数据类型的n个数据元素的有限序列，n-表长（n=0时为空表）</p>
+<p>若以L命名，一边表示为：L=（a1,a2,…,an）——1、2、…、n表示第n个元素在线性表中的<em>位序</em>(从1开始)，a1称表头元素，an称表尾元素，除此之外的元素都有唯一的直接前驱和直接后继</p>
+<p>线性表的基本操作：<em>（创销增删改查）</em><br>
+InitList（&amp;L）：初始化表——构造空表，分配空间<br>
+DestroyList（&amp;L）：销毁操作——销毁线性表，释放空间</p>
+<p>ListInsert（&amp;L,i,e）：插入操作——在L中第i个位置插入指定元素e<br>
+ListDelete（&amp;L,i,&amp;e）：删除操作——删除L中第i个位置的元素，并用e返回删除元素的值</p>
+<p>LocateElem(L,e)：按值查找——在L中查找具有指定关键字值得元素<br>
+GetEleme（L,i）按位查找——获取L中第i个位置得元素得值</p>
+<p>其他常用操作：<br>
+Length（L）：求表长——返回线性表中元素的个数<br>
+PrintList（L）：输出——按前后顺序输出L中的所有元素<br>
+Empty（L）：判空操作——若L为空，则返回true，否则返回false</p>
+<ul>
+<li>顺序表：<br>
+顺序表是用顺序存储得方式实现的线性表<br>
+定义：1.静态分配<br>
+#include &lt;stdio.h&gt;<br>
+#define MaxSiza 10<br>
+typedef struct{<br>
+int data[MaxSize]<br>
+int length<br>
+}SqList;</li>
+</ul>
+<p>void InitList(SqList &amp;L){<br>
+for(int i=0; i&lt;MaxSize; i++){<br>
+L.data[i]=0;<br>
+}<br>
+L.length=0;<br>
+}</p>
+<p>int main(){<br>
+SqList L;<br>
+InitList(L);<br>
+//……<br>
+return 0;<br>
+}</p>
+<p>2.动态分配<br>
+#include &lt;stdib.h&gt;</p>
+<p>#define InitSize 10<br>
+typedef struct{<br>
+int *data;<br>
+int MaxSize;<br>
+int length;<br>
+}SeqList;</p>
+<p>void InitList(SeqList &amp;L){<br>
+//用malloc函数申请一片连续存储空间<br>
+L.data=(int <em>)mallo(InitSize</em>sizeof(int));<br>
+L.length=0;<br>
+L.MaxSize=InitSize;<br>
+}</p>
+<p>//增加动态数组长度<br>
+void IncreaseSize(SeqList &amp;L, int len){<br>
+int *p=L.data;<br>
+L.data=(int *)malloc((L.MaxSize+len)*sizeof(int));<br>
+for(int i=0; i&lt;L.length; i++){<br>
+L.data[i]=p[i];<br>
+}<br>
+L.Maxsize=L.MaxSize+len;<br>
+free(p)<br>
+}</p>
+<p>int main(){<br>
+SeqList L;<br>
+InitList(L);<br>
+//...<br>
+IncreaseSize(L,5);<br>
+return 0;<br>
+}</p>
+<p>顺序表的特点：<br>
+1.随机访问：可以在O（1）时间内找到第i个元素<br>
+2.存储密度高：每个节点只存储数据元素<br>
+3.拓展容量不方便（即便是动态存储，拓展容量的时间复杂度也较高）<br>
+4.插入、删除操作不方便</p>
+<ul>
+<li>顺序表的插入、删除操作</li>
+</ul>
+<p>ListInsert(&amp;L,i,e)：插入操作——在L中的第i个位置插入指定元素e<br>
+注：此处的i为位序，从1开始</p>
+<p>eg：以静态分配为例<br>
+#define MaxSize 10<br>
+typedef struct{<br>
+ElemType data[MaxSize];<br>
+int length;<br>
+}SqList;</p>
+<p>void ListInseret(SqList &amp;L,int i,int e){<br>
+for(int j=L.length;j&gt;=i;j--){<br>
+L.data[j]=L.data[j-1];<br>
+}<br>
+L.data[i-1]=e;<br>
+L.length++;<br>
+}</p>
+<p>int main(){<br>
+SqList L;<br>
+InitList(L);<br>
+//……<br>
+ListInsert(L,3,3);<br>
+return 0;<br>
+}</p>
+
+              </div>
+              <div class="toc-container">
+                
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://sasha0996.github.io/sasha.github.io/post/jian-pan-shu-ru-ping-fang-m2huo-li-fang-m3deng-te-shu-zi-fu/">
+              <h3 class="post-title">
+                键盘输入平方（m²）或立方（m³）等特殊字符
+              </h3>
+            </a>
+          </div>
+        
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: '2f0af724eb6867518cdf',
+    clientSecret: '7e9c9b5fadb34a89d433c8833ac0e7dbf0374aae',
+    repo: 'sasha.github.io',
+    owner: 'sasha0996',
+    admin: ['sasha0996'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://sasha0996.github.io/sasha.github.io//atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>
